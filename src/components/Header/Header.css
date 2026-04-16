@@ -1,0 +1,11 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    top: 0;
+    position: fixed;
+    padding: 1px;
+    background-color: var(--azul-oscuro);
+    gap: 35em;
+    width: 100%;
+}

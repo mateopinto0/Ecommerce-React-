@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+@import url();
+#root{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+body{
+   background: linear-gradient(135deg, #010d66, #0084ff, #3400FF);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+    color: var(--text-white);
+    margin: 0;
+    font-family: 'Noto Sans Display',sans-serif;
+}
+
+main{
+  flex: 1;
+  margin-top: 6em;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

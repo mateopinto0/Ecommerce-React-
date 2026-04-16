@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.botonesCarrito{
+    background-color: var(--color-celeste);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: x-large;
+    width: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

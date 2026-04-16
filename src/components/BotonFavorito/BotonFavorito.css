@@ -1,0 +1,20 @@
+
+.botonFavorito{
+    cursor: pointer;
+    position: relative;
+
+}
+
+.activo{
+    color: red;
+}
+
+.desactivado{
+    color: black;
+}
+
+.desactivado:hover{
+    transition: 0.2ms;
+    color: red;
+}
+

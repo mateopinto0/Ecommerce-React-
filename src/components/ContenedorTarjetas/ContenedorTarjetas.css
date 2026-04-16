@@ -1,0 +1,22 @@
+.cards-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 2em;
+}
+
+h2{
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    
+    body{
+        font-size: 14px;
+    }
+
+    .cards-container{
+        flex-wrap: wrap;
+    }
+}
