@@ -4,6 +4,8 @@ import gta from '../../assets/img/Gta.webp'
 import gow from '../../assets/img/God of war.webp'
 import re from '../../assets/img/Resident Evil.webp'
 import { ItemList } from "../ItemList/ItemList"
+import { useEffect, useState } from "react"
+import { Spinner } from "../Spinner/Spinner"
 
 export const ContenedorTarjetas = () => {
 
@@ -13,6 +15,18 @@ export const ContenedorTarjetas = () => {
         {imagenUrl:re,nombre:"Resident Evil",precio:2500}
     ];
     
+    const[loading,setLoading]=useState(true);
+        useEffect(() => {
+        setTimeout(() => {
+        setLoading(false);
+        }, 1000);
+        }, []);
+
+    if(loading){
+        return( 
+        <Spinner></Spinner>
+        )
+    }
 
     return(
         /*<>
@@ -23,6 +37,7 @@ export const ContenedorTarjetas = () => {
         ))}
         </div>
         </>*/
+
         <ItemList productos={productos}></ItemList>
     )
 }
