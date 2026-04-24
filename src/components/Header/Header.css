@@ -6,6 +6,5 @@
     position: fixed;
     padding: 1px;
     background-color: var(--azul-oscuro);
-    gap: 35em;
     width: 100%;
 }

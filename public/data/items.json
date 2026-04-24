@@ -3,7 +3,7 @@
         "id": 1,
         "nombre": "God of war",
         "precio": 1200.0,
-        "imagenUrl": "/img/God-of-War.webp"
+        "imagenUrl": "/img/God-of-war.webp"
     },
     {
       "id": 2,
@@ -16,5 +16,11 @@
         "nombre": "Resident Evil",
         "precio": 1200.0,
         "imagenUrl": "/img/Resident-evil.webp"
+    },
+    {
+        "id":4,
+        "nombre":"The forest",
+        "precio":200.0,
+        "imagenUrl":"/img/the-forest.webp"
     }
 ]

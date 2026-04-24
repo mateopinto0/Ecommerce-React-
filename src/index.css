@@ -10,9 +10,11 @@ body{
    background: linear-gradient(135deg, #010d66, #0084ff, #3400FF);
     background-size: 400% 400%;
     animation: gradientMove 10s ease infinite;
+    background-repeat: no-repeat;
     color: var(--text-white);
     margin: 0;
     font-family: 'Noto Sans Display',sans-serif;
+    min-height: 100vh;
 }
 
 main{
@@ -29,5 +31,11 @@ main{
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        min-height: 100vh;
+        background-attachment: fixed;
     }
 }
