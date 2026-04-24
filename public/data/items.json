@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "nombre": "God of war",
+        "precio": 1200.0,
+        "imagenUrl": "/img/God-of-War.webp"
+    },
+    {
+      "id": 2,
+        "nombre": "Grand theft auto",
+        "precio": 2500.0,
+        "imagenUrl": "/img/Gta.webp"  
+    },
+    {
+        "id": 3,
+        "nombre": "Resident Evil",
+        "precio": 1200.0,
+        "imagenUrl": "/img/Resident-evil.webp"
+    }
+]

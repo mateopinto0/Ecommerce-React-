@@ -1,22 +1,21 @@
 import { Item } from "../Item/Item"
 import './ItemListContainer.css'
-import gta from '../../assets/img/Gta.webp'
-import gow from '../../assets/img/God of war.webp'
-import re from '../../assets/img/Resident Evil.webp'
 import { ItemList } from "../ItemList/ItemList"
 import { useEffect, useState } from "react"
 import { Spinner } from "../Spinner/Spinner"
 
 export const ItemListContainer = () => {
 
-    const productos = [
-        {imagenUrl:gow,nombre:"God of war",precio:1200},
-        {imagenUrl:gta,nombre:"Grand theft Auto",precio:2200},
-        {imagenUrl:re,nombre:"Resident Evil",precio:2500}
-    ];
-    
+    const[items,setItems]=useState([]);
     const[loading,setLoading]=useState(true);
+
         useEffect(() => {
+            fetch("/data/items.json").
+            then((res)=> res.json().
+            then((data)=>setItems(data)).
+            catch((err)=> console.log(err)).
+            finally(()=>setLoading(false)));
+
         setTimeout(() => {
         setLoading(false);
         }, 1000);
@@ -38,6 +37,6 @@ export const ItemListContainer = () => {
         </div>
         </>*/
 
-        <ItemList productos={productos}></ItemList>
+        <ItemList items={items}></ItemList>
     )
 }

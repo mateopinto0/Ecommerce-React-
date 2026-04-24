@@ -1,13 +1,13 @@
 import { Item } from "../Item/Item"
 
-export const ItemList = ({productos}) => {
+export const ItemList = ({items}) => {
 
     return(
         <>
         <h2>Lista de Juegos</h2>
         <div className="cards-container">
-        {productos.map((producto,index)=>(
-            <Item key={index} {...producto}></Item>
+        {items.map((item)=>(
+            <Item key={item.id} {...item}></Item>
         ))}
         </div>
         </>
