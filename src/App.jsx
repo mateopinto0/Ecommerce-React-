@@ -5,7 +5,8 @@ import heroImg from './assets/hero.png'
 import './Colores.css'
 import './App.css'
 import { Layout } from './components/Layout/Layout'
-import { ContenedorTarjetas } from './components/ContenedorTarjetas/ContenedorTarjetas'
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
+
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
   return (
     
       <Layout>
-        <ContenedorTarjetas></ContenedorTarjetas>
+        <ItemListContainer></ItemListContainer>
       </Layout>
     
   )

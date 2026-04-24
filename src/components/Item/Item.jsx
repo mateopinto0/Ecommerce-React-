@@ -1,8 +1,8 @@
 import { BotonCarrito } from '../BotonCarrito/BotonCarrito'
 import { BotonFavorito } from '../BotonFavorito/BotonFavorito'
-import './TarjetaProducto.css'
+import './Item.css'
 
-export const TarjetaProducto = ({imagenUrl,nombre,precio}) => {
+export const Item = ({imagenUrl,nombre,precio}) => {
     return(
         <div className="card">
             <img src={imagenUrl} alt={nombre} />

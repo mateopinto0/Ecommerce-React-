@@ -1,4 +1,4 @@
-import { TarjetaProducto } from "../TarjetaProducto/TarjetaProducto"
+import { Item } from "../Item/Item"
 
 export const ItemList = ({productos}) => {
 
@@ -7,7 +7,7 @@ export const ItemList = ({productos}) => {
         <h2>Lista de Juegos</h2>
         <div className="cards-container">
         {productos.map((producto,index)=>(
-            <TarjetaProducto key={index} {...producto}></TarjetaProducto>
+            <Item key={index} {...producto}></Item>
         ))}
         </div>
         </>

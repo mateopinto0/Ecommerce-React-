@@ -1,5 +1,5 @@
-import { TarjetaProducto } from "../TarjetaProducto/TarjetaProducto"
-import './ContenedorTarjetas.css'
+import { Item } from "../Item/Item"
+import './ItemListContainer.css'
 import gta from '../../assets/img/Gta.webp'
 import gow from '../../assets/img/God of war.webp'
 import re from '../../assets/img/Resident Evil.webp'
@@ -7,7 +7,7 @@ import { ItemList } from "../ItemList/ItemList"
 import { useEffect, useState } from "react"
 import { Spinner } from "../Spinner/Spinner"
 
-export const ContenedorTarjetas = () => {
+export const ItemListContainer = () => {
 
     const productos = [
         {imagenUrl:gow,nombre:"God of war",precio:1200},
