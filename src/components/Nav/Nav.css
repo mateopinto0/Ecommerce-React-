@@ -15,3 +15,6 @@ a:hover{
     transition: 0.2ms;
     color: var(--color-celeste);
 }
+.nav li{
+    list-style: none;
+}
