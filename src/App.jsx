@@ -8,6 +8,7 @@ import { Header } from './components/Header/Header'
 import {Footer} from './components/Footer/Footer'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
 import { Route, Routes } from 'react-router-dom'
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path='/carrito' element={<h1>Carrito</h1>}></Route>
           <Route path='/' element={<ItemListContainer></ItemListContainer>}></Route>
+          <Route path='/items/:id' element={<ItemDetailContainer></ItemDetailContainer>}></Route>
         </Routes>
       </main>
     <Footer></Footer>  
