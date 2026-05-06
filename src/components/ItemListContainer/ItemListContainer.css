@@ -19,5 +19,12 @@ h2{
 
     .cards-container{
         flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width:840px){
+    .cards-container{
+        justify-content: center;
     }
 }
