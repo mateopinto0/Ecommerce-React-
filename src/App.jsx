@@ -20,7 +20,7 @@ function App() {
     <Header></Header>
       <main>
         <Routes>
-          <Route path='/carrito' element={<h1>Carrito</h1>}></Route>
+          <Route path='/carrito' element={<div className='carrito'><h1>Carrito</h1>No hay productos.<p></p></div>}></Route>
           <Route path='/' element={<ItemListContainer></ItemListContainer>}></Route>
           <Route path='/items/:id' element={<ItemDetailContainer></ItemDetailContainer>}></Route>
         </Routes>
