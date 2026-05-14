@@ -9,6 +9,7 @@ import {Footer} from './components/Footer/Footer'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
 import { Route, Routes } from 'react-router-dom'
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
+import { Cart } from './components/Cart/Cart'
 
 
 
@@ -20,7 +21,7 @@ function App() {
     <Header></Header>
       <main>
         <Routes>
-          <Route path='/carrito' element={<div className='carrito'><h1>Carrito</h1>No hay productos.<p></p></div>}></Route>
+          <Route path='/carrito' element={<Cart></Cart>}></Route>
           <Route path='/' element={<ItemListContainer></ItemListContainer>}></Route>
           <Route path='/items/:id' element={<ItemDetailContainer></ItemDetailContainer>}></Route>
         </Routes>
