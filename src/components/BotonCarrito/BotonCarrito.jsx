@@ -1,7 +1,7 @@
 import { useState } from "react"
 import './BotonCarrito.css'
 
-export const BotonCarrito = () => {
+export const BotonCarrito = ({}) => {
     
     const[contador,setContador]= useState(0);
     

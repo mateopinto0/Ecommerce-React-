@@ -68,13 +68,20 @@ export const CartProvider = ({children}) => {
         Navigate("/");
     }
 
+    const getCart = () => {
+        return cart;
+    }
+
+   
     const values = {
         clearCart,
         addToCart,
         removeItem,
         getTotalCart,
         getTotalPrice,
-        checkout
+        checkout,
+        getCart
+       
     };
     
     return (

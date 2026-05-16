@@ -3,24 +3,28 @@
         "id": 1,
         "nombre": "God of war",
         "precio": 1200.0,
-        "imagenUrl": "/img/God-of-war.webp"
+        "imagenUrl": "/img/God-of-war.webp",
+          "cantidad": 0  
     },
     {
       "id": 2,
         "nombre": "Grand theft auto",
         "precio": 2500.0,
-        "imagenUrl": "/img/Gta.webp"  
+        "imagenUrl": "/img/Gta.webp"
+       
     },
     {
         "id": 3,
         "nombre": "Resident Evil",
         "precio": 1200.0,
         "imagenUrl": "/img/Resident-evil.webp"
+      
     },
     {
         "id":4,
         "nombre":"The forest",
         "precio":200.0,
         "imagenUrl":"/img/the-forest.webp"
+       
     }
 ]

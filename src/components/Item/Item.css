@@ -6,7 +6,7 @@
     padding: 1em;
     border-radius: 1em;
     background-color: var(--text-white);
-    width: 100%;
+    width: 300px;
     max-width: 320px; 
     color: var(--color-celeste);
     box-shadow: 0 0 10px #0084ff,
