@@ -41,7 +41,7 @@ return(
         { cart.length === 0 ? <p>El carrito está vacío.</p> :  cart.map((item) => (
             
             <Item key={item.id} {...item}>
-                <BotonCarrito precio={item.precio} onQuantityChange={(qty) => updateQuantity(item.id, qty)}></BotonCarrito>
+                <BotonCarrito precio={item.precio} cantidad={item.cantidad} onQuantityChange={(qty) => updateQuantity(item.id, qty)}></BotonCarrito>
                 <button className="button-cart-red" onClick={() => removeItemHandler(item.id)}>
                     Eliminar del carrito
                 </button>

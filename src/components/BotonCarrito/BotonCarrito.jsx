@@ -1,9 +1,9 @@
 import { useState } from "react"
 import './BotonCarrito.css'
 
-export const BotonCarrito = ({precio = 0, onQuantityChange}) => {
+export const BotonCarrito = ({precio = 0, onQuantityChange, cantidad = 1}) => {
     
-    const[contador,setContador]= useState(1);
+    const[contador,setContador]= useState(cantidad);
     
     const incrementar = () =>{
         const nuevo= contador + 1;

@@ -5,7 +5,7 @@
         "precio": 1200.0,
         "imagenUrl": "/img/God-of-war.webp",
         "descripcion": "God of War es un videojuego de acción y aventura desarrollado por Santa Monica Studio y publicado por Sony Interactive Entertainment. El juego sigue la historia de Kratos, un guerrero espartano que se encuentra en una nueva aventura en la mitología nórdica junto a su hijo Atreus. Con gráficos impresionantes, una narrativa envolvente y un sistema de combate dinámico, God of War ha sido aclamado por la crítica y los jugadores por igual, consolidándose como uno de los mejores juegos de su generación."
-           
+           , "cantidad":1
     },
     {
       "id": 2,
@@ -13,14 +13,15 @@
         "precio": 2500.0,
         "imagenUrl": "/img/Gta.webp",
         "descripcion": "Grand Theft Auto (GTA) es una serie de videojuegos de acción y aventura desarrollada por Rockstar Games. La serie se centra en la vida criminal y las actividades ilegales en un entorno de mundo abierto. Los jugadores asumen el papel de personajes involucrados en actividades delictivas, como robos, tráfico de drogas y enfrentamientos con la policía. GTA es conocido por su narrativa envolvente, su libertad de exploración y su estilo de juego dinámico, lo que lo convierte en una de las franquicias más exitosas y controvertidas en la historia de los videojuegos."
-       
+       , "cantidad":1
     },
     {
         "id": 3,
         "nombre": "Resident Evil",
         "precio": 1200.0,
         "imagenUrl": "/img/Resident-evil.webp",
-        "descripcion": "Resident Evil es una serie de videojuegos de survival horror desarrollada por Capcom. La serie se centra en la lucha contra zombis y criaturas monstruosas en entornos aterradores. Los jugadores asumen el papel de personajes que deben sobrevivir a horrores y descubrir secretos oscuros mientras luchan por su vida. Resident Evil ha sido aclamado por su narrativa envolvente, su ambiente tenebroso y su sistema de combate intenso, consolidándose como una de las franquicias más influyentes en el género de los videojuegos de survival horror."
+        "descripcion": "Resident Evil es una serie de videojuegos de survival horror desarrollada por Capcom. La serie se centra en la lucha contra zombis y criaturas monstruosas en entornos aterradores. Los jugadores asumen el papel de personajes que deben sobrevivir a horrores y descubrir secretos oscuros mientras luchan por su vida. Resident Evil ha sido aclamado por su narrativa envolvente, su ambiente tenebroso y su sistema de combate intenso, consolidándose como una de las franquicias más influyentes en el género de los videojuegos de survival horror.",
+        "cantidad":1
     },
     {
         "id":4,
@@ -28,6 +29,6 @@
         "precio":200.0,
         "imagenUrl":"/img/the-forest.webp",
         "descripcion":"The Forest es un videojuego de supervivencia y horror desarrollado por Endnight Games. En el juego, los jugadores asumen el papel de un sobreviviente de un accidente aéreo que se encuentra en una isla misteriosa llena de peligros. El objetivo principal es sobrevivir recolectando recursos, construyendo refugios y enfrentándose a criaturas hostiles que habitan la isla. The Forest combina elementos de exploración, construcción y combate, ofreciendo una experiencia inmersiva y desafiante para los jugadores que buscan una aventura de supervivencia en un entorno aterrador."
-       
+       , "cantidad":1
     }
 ]
