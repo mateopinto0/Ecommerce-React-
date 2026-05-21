@@ -5,6 +5,7 @@ import { ItemDetail } from "../ItemDetail/ItemDetail";
 import "./ItemDetailContainer.css";
 
 
+
 export const ItemDetailContainer = () => {
     const {id} = useParams();
 
@@ -36,12 +37,19 @@ export const ItemDetailContainer = () => {
     }
 
     return(
-        <section className="item-container">
-        <div>
+        
+        <div className="item-container">
             <h1>Detalles del producto</h1>
-            <ItemDetail item={itemDetail}></ItemDetail>
+            <ItemDetail 
+            id={itemDetail.id}
+                imagenUrl={itemDetail.imagenUrl}
+                nombre={itemDetail.nombre}
+                precio={itemDetail.precio}
+                descripcion={itemDetail.descripcion}>
+                    
+            </ItemDetail>
         </div>
-        </section>
+        
     )
 
 }

@@ -8,10 +8,10 @@ export const Item = ({imagenUrl,nombre,precio,children}) => {
             <img src={imagenUrl} alt={nombre} />
             <h3>{nombre}</h3>
             <h4>Precio: {precio} $</h4>
-            <div className='botonesContainer'>
+            
             
             {children}
-            </div>
+            
         </div>
     )
 }

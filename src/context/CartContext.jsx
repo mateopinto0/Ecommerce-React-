@@ -37,11 +37,17 @@ export const CartProvider = ({children}) => {
             alert("El producto ya está en el carrito");
             return
         }
+        
 
-        setCart([...cart, item]);
+        setCart([...cart, {...item, cantidad: 1}]);
         console.log("Producto agregado al carrito:");
 
     }
+    const updateQuantity = (id, cantidad) => {
+    setCart(prev =>
+        prev.map(item => item.id === id ? { ...item, cantidad } : item)
+    );
+}
 
     const removeItem = (id) => {
 
@@ -59,7 +65,7 @@ export const CartProvider = ({children}) => {
 
     const getTotalPrice = () => {
         //reduce es un método de array que se utiliza para reducir un array a un solo valor, en este caso, el total del precio de los productos en el carrito
-        return cart.reduce((total, item) => total + item.precio, 0);
+        return cart.reduce((total, item) => total + (item.precio*item.cantidad), 0);
     }
 
     const checkout = () => {
@@ -80,7 +86,8 @@ export const CartProvider = ({children}) => {
         getTotalCart,
         getTotalPrice,
         checkout,
-        getCart
+        getCart,
+        updateQuantity
        
     };
     

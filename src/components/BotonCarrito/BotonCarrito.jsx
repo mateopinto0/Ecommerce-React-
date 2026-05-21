@@ -1,17 +1,21 @@
 import { useState } from "react"
 import './BotonCarrito.css'
 
-export const BotonCarrito = ({}) => {
+export const BotonCarrito = ({precio = 0, onQuantityChange}) => {
     
-    const[contador,setContador]= useState(0);
+    const[contador,setContador]= useState(1);
     
     const incrementar = () =>{
-        setContador(contador + 1);
+        const nuevo= contador + 1;
+        setContador(nuevo);
+        onQuantityChange(nuevo);
     }
 
     const decrementar = () =>{
-        if(contador > 0){
-            setContador(contador - 1);
+        if(contador >= 1){
+            const nuevo = contador - 1;
+            setContador(nuevo);
+            onQuantityChange(nuevo);
         }
     }
 

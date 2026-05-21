@@ -1,0 +1,45 @@
+.card-detail {
+    display: flex;
+    flex-direction: row;      /* desktop: imagen | info */
+    gap: 32px;
+    padding: 24px;
+    align-items: flex-start;
+    background-color: white;
+    color: var(--color-celeste);
+    width: 70%;
+    border-radius: 1em;
+}
+
+.card-detail img {
+    width: 380px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;           /* evita que la imagen se achique */
+}
+
+.card-detail-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;                  /* ocupa el espacio restante */
+}
+
+.card-detail-descripcion {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ✅ responsive: mobile va en columna */
+@media (max-width: 768px) {
+    .card-detail {
+        flex-direction: column; /* imagen arriba, info abajo */
+        gap: 16px;
+        padding: 16px;
+        width: 80%;
+    }
+
+    .card-detail img {
+        width: 100%;            /* ocupa todo el ancho */
+    }
+}
