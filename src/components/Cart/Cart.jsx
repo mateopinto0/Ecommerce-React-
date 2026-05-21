@@ -37,7 +37,7 @@ return(
             
             <Item key={item.id} {...item}>
                 <BotonCarrito ></BotonCarrito>
-                <button className="button" onClick={() => removeItemHandler(item.id)}>
+                <button className="button-cart-red" onClick={() => removeItemHandler(item.id)}>
                     Eliminar del carrito
                 </button>
             </Item>

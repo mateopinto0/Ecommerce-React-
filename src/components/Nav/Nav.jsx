@@ -12,8 +12,7 @@ export const Nav = () => {
        
         <nav className="nav">
             <li><Link to={"/"}>Inicio</Link></li>
-            <li><Link to={"/carrito"}>Carrito
-            {totalCart > 0 && <span>{totalCart}</span>}
+            <li><Link to={"/carrito"}>Carrito {totalCart > 0 && <span> {totalCart}</span>}
             </Link></li>
         </nav>
        

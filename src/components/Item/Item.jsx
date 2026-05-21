@@ -9,7 +9,7 @@ export const Item = ({imagenUrl,nombre,precio,children}) => {
             <h3>{nombre}</h3>
             <h4>Precio: {precio} $</h4>
             <div className='botonesContainer'>
-            <BotonFavorito></BotonFavorito>
+            
             {children}
             </div>
         </div>

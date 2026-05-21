@@ -14,3 +14,15 @@
     padding: 2em;
     gap: 1em;
 }
+
+.button-cart-red{
+    display: flex;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: medium;
+    padding: 10px;
+    border-radius: 10px;
+}
