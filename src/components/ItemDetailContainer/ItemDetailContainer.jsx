@@ -18,12 +18,12 @@ export const ItemDetailContainer = () => {
 
     useEffect(()=>{
         const obtenerDetalle = async () =>{
-            const q= query(collection(db,"products"),where("id","==",Number(id)))
-            const snap= await getDocs(q);
+            const ref= doc(db,"products",id)
+            const snap= await getDoc(ref);
 
-            if(!snap.empty){
-               const doc= snap.docs[0]
-                setItemDetail({id: doc.id , ...doc.data()})
+            if(snap.exists){
+               
+                setItemDetail({id: snap.id , ...snap.data()})
                 
             }else{
                 console.log("No existe el juego")

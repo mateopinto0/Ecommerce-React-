@@ -19,7 +19,7 @@ export const ItemListContainer = () => {
                     id : doc.id,
                     ...doc.data()
                 }));
-                console.log("Lista" + lista)
+                
                 setItems(lista);
                 setLoading(false);
             }
