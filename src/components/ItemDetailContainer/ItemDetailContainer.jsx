@@ -3,27 +3,35 @@ import { Spinner } from "../Spinner/Spinner"
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import "./ItemDetailContainer.css";
+import { collection, doc, getDoc, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../firebase/config";
 
 
 
 export const ItemDetailContainer = () => {
     const {id} = useParams();
-
+    console.log("id recibidio" + id)
     const [itemDetail,setItemDetail] = useState(null);
     const [loading,setLoading] = useState(true);
 
-    useEffect(() => {
-        fetch("/data/items.json").
-        then((res) => res.json()).
-        then(data => {
-            const item = data.find((element) => String(element.id) === id);
-            if(item){
-                setItemDetail(item);
-                return;
+   
+
+    useEffect(()=>{
+        const obtenerDetalle = async () =>{
+            const q= query(collection(db,"products"),where("id","==",Number(id)))
+            const snap= await getDocs(q);
+
+            if(!snap.empty){
+               const doc= snap.docs[0]
+                setItemDetail({id: doc.id , ...doc.data()})
+                
+            }else{
+                console.log("No existe el juego")
             }
-        }).catch( err => console.log(err)).finally(() => setLoading(false)) 
-    }, []
-    )
+             setLoading(false);
+        }
+        obtenerDetalle()
+    },[id])
 
     if(loading){
         return(

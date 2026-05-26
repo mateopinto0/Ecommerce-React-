@@ -3,23 +3,29 @@ import './ItemListContainer.css'
 import { ItemList } from "../ItemList/ItemList"
 import { useEffect, useState } from "react"
 import { Spinner } from "../Spinner/Spinner"
+import { collection, getDocs } from "firebase/firestore"
+import { db } from "../../firebase/config"
 
 export const ItemListContainer = () => {
 
     const[items,setItems]=useState([]);
     const[loading,setLoading]=useState(true);
 
-        useEffect(() => {
-            fetch("/data/items.json").
-            then((res)=> res.json().
-            then((data)=>setItems(data)).
-            catch((err)=> console.log(err)).
-            finally(()=>setLoading(false)));
 
-        setTimeout(() => {
-        setLoading(false);
-        }, 1000);
-        }, []);
+        useEffect(()=>{
+            const obtenerJuegos = async () => {
+                const snapshot = await getDocs(collection(db,"products"));
+                const lista = snapshot.docs.map(doc => ({
+                    id : doc.id,
+                    ...doc.data()
+                }));
+                console.log("Lista" + lista)
+                setItems(lista);
+                setLoading(false);
+            }
+            obtenerJuegos();
+            
+        },[])
 
     if(loading){
         return( 
