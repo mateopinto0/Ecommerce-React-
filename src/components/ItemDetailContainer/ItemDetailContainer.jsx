@@ -5,32 +5,22 @@ import { ItemDetail } from "../ItemDetail/ItemDetail";
 import "./ItemDetailContainer.css";
 import { collection, doc, getDoc, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../firebase/config";
+import { obtenerProductoPorId } from "../../service/ProductoService";
 
 
 
 export const ItemDetailContainer = () => {
     const {id} = useParams();
-    console.log("id recibidio" + id)
     const [itemDetail,setItemDetail] = useState(null);
     const [loading,setLoading] = useState(true);
 
    
 
     useEffect(()=>{
-        const obtenerDetalle = async () =>{
-            const ref= doc(db,"products",id)
-            const snap= await getDoc(ref);
-
-            if(snap.exists){
-               
-                setItemDetail({id: snap.id , ...snap.data()})
-                
-            }else{
-                console.log("No existe el juego")
-            }
-             setLoading(false);
-        }
-        obtenerDetalle()
+        obtenerProductoPorId(id).then((producto)=>{
+            setItemDetail(producto);
+            setLoading(false);
+        })
     },[id])
 
     if(loading){

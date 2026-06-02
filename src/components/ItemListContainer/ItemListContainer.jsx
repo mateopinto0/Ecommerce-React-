@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import { Spinner } from "../Spinner/Spinner"
 import { collection, getDocs } from "firebase/firestore"
 import { db } from "../../firebase/config"
+import { obtenerProductos } from "../../service/ProductoService"
 
 export const ItemListContainer = () => {
 
@@ -13,17 +14,8 @@ export const ItemListContainer = () => {
 
 
         useEffect(()=>{
-            const obtenerJuegos = async () => {
-                const snapshot = await getDocs(collection(db,"products"));
-                const lista = snapshot.docs.map(doc => ({
-                    id : doc.id,
-                    ...doc.data()
-                }));
-                
-                setItems(lista);
-                setLoading(false);
-            }
-            obtenerJuegos();
+        
+            obtenerProductos().then((lista)=>{setItems(lista); setLoading(false);})
             
         },[])
 
