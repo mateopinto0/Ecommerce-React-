@@ -11,7 +11,7 @@
 }
 
 .card-detail img {
-    width: 380px;
+    width: 300px;
     max-width: 100%;
     object-fit: cover;
     border-radius: 8px;
@@ -28,6 +28,11 @@
 .card-detail-descripcion {
     color: #666;
     line-height: 1.6;
+}
+.container-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ✅ responsive: mobile va en columna */

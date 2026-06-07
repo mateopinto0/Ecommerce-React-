@@ -7,7 +7,7 @@
 }
 
 body{
-   background: linear-gradient(135deg, #010d66, #0084ff, #3400FF);
+   background: linear-gradient(135deg, var(--azul-oscuro), var(--color-violet), var(--color-celeste));
     background-size: 400% 400%;
     animation: gradientMove 10s ease infinite;
     background-repeat: no-repeat;
@@ -67,5 +67,15 @@ main{
     body {
         min-height: 100vh;
         background-attachment: fixed;
+        font-size: 90%;
     }
+}
+
+@media (max-width: 500px) {
+    body {
+        min-height: 100vh;
+        background-attachment: fixed;
+        font-size: 70%;
+    }
+    
 }

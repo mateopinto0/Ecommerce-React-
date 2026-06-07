@@ -15,7 +15,9 @@ export const ItemDetail = ({id,imagenUrl,nombre,precio,descripcion}) => {
                 <h2>{nombre}</h2>
                 <p className="card-detail-descripcion">{descripcion}</p>
                 <h4>Precio: {precio} $</h4>
+                <div className="container-button">
                 <button className="button" onClick={addToCartHandler}>Agregar al carrito</button>
+                </div>
             </div>
         </div>
     )
