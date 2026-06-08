@@ -1,10 +1,13 @@
-import { collection, doc, getDoc, getDocs } from "firebase/firestore"
+import { addDoc, collection, doc, getDoc, getDocs } from "firebase/firestore"
 import { db } from "../firebase/config"
+
+
 
 export const obtenerProductos = async () => {
 
     try{
-    const snapshot = await getDocs(collection(db,"products"));
+        const productsRef= collection(db,"products");
+    const snapshot = await getDocs(productsRef);
 
     const lista= snapshot.docs.map(doc=>({
         id: doc.id,
@@ -33,5 +36,20 @@ export const obtenerProductoPorId = async (id) => {
     }catch(error){
         console.error("Error al obtener el producto:", error);
         return null;
+    }
+}
+
+export const addProduct = async(productData) => {
+     try {
+       
+        const productsRef = collection(db, "products");
+       
+        const docRef = await addDoc(productsRef,productData)
+        
+        return docRef.id;
+    } catch(error) {
+        console.error("Error completo:", error);
+        console.error("Stack:", error.stack);
+        throw err;
     }
 }

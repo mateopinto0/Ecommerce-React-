@@ -10,6 +10,8 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 import { Route, Routes } from 'react-router-dom'
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
 import { Cart } from './components/Cart/Cart'
+import { ProductFormContainer } from './components/adminComponents/ProductFormContainer'
+import { ProductSuccess } from './components/adminComponents/ProductsSuccess'
 
 
 
@@ -24,6 +26,8 @@ function App() {
           <Route path='/carrito' element={<Cart></Cart>}></Route>
           <Route path='/' element={<ItemListContainer></ItemListContainer>}></Route>
           <Route path='/items/:id' element={<ItemDetailContainer></ItemDetailContainer>}></Route>
+          <Route path='/admin' element={<ProductFormContainer></ProductFormContainer>}></Route>
+          <Route path='/success/:id' element={<ProductSuccess></ProductSuccess>}></Route>
         </Routes>
       </main>
     <Footer></Footer>  

@@ -5,7 +5,7 @@ import { ItemDetail } from "../ItemDetail/ItemDetail";
 import "./ItemDetailContainer.css";
 import { collection, doc, getDoc, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../firebase/config";
-import { obtenerProductoPorId } from "../../service/ProductoService";
+import { obtenerProductoPorId } from "../../service/productoService";
 
 
 
