@@ -12,6 +12,8 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import { Cart } from './components/Cart/Cart'
 import { ProductFormContainer } from './components/adminComponents/ProductFormContainer'
 import { ProductSuccess } from './components/adminComponents/ProductsSuccess'
+import { PublicLayout } from './layouts/PublicLayout'
+import { AdminLayout } from './layouts/AdminLayout'
 
 
 
@@ -20,17 +22,20 @@ function App() {
 
   return (
     <>
-    <Header></Header>
-      <main>
+    
         <Routes>
+          <Route element={<PublicLayout />}>
           <Route path='/carrito' element={<Cart></Cart>}></Route>
           <Route path='/' element={<ItemListContainer></ItemListContainer>}></Route>
           <Route path='/items/:id' element={<ItemDetailContainer></ItemDetailContainer>}></Route>
-          <Route path='/admin' element={<ProductFormContainer></ProductFormContainer>}></Route>
-          <Route path='/success/:id' element={<ProductSuccess></ProductSuccess>}></Route>
+      </Route>
+
+      <Route path='/admin' element={<AdminLayout />}>
+          <Route path='new/product' element={<ProductFormContainer></ProductFormContainer>}></Route>
+          <Route path='success/:id' element={<ProductSuccess></ProductSuccess>}></Route>
+      </Route>    
         </Routes>
-      </main>
-    <Footer></Footer>  
+       
     </>
   )
 }
