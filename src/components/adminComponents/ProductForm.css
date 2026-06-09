@@ -1,0 +1,32 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.input{
+    display: flex;
+    flex-direction: column;
+}
+
+.input input{
+    width: 30em;
+    border-radius: 1em;
+    border: none;
+    padding: 6px;
+}
+.btn-agregar{
+    padding: 10px;
+    border-radius: 1em;
+    margin: 1em;
+}
+
+@media screen and (max-width:580px) {
+    .input input{
+        width: 20em;
+    }
+}
