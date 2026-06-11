@@ -1,73 +1,111 @@
-.dashboard{
+.dashboard {
+  width: 100%;
+  min-height: 100vh; /* ← era height, con min-height el contenido puede crecer */
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--azul-oscuro);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1em;
+  z-index: 100;
+  box-sizing: border-box; /* ← evita que el padding desborde el 100% */
+}
+
+.dashboard-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5em; /* ← espacio para el header fijo */
+  padding: 0 1rem;
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1em;
+  gap: 1em;
+  flex-wrap: wrap; /* ← en mobile los botones bajan a la siguiente línea */
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: wrap; /* ← idem */
+}
+
+.btn-volver {
+  background-color: var(--color-celeste);
+  border: none;
+  padding: 7px 14px;
+  border-radius: 1em;
+  font-size: small;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-volver:hover {
+  background-color: var(--text-white);
+  color: var(--azul-oscuro);
+  transition: background-color 0.3s; /* ← era 0.5ms, no se notaba */
+}
+
+.button-logout {
+  background-color: red;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 1em;
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.help {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3em;
+  padding: 0 1rem;
+  text-align: center; /* ← texto centrado en mobile */
+}
+
+@media (max-width: 768px) {
+  .actions {
+    flex-direction: column; /* ← en mobile los botones van en columna */
     width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+  }
 
-.dashboard-actions{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1em;
-}
-.buttons-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 1em;
-    gap: 2em;
-}
-
-.btn-volver{
-    background-color: var(--color-celeste);
-    border: none;
-    padding: 7px;
-    border-radius: 1em;
-    font-size: small;
-}
-
-.button-logout{
-    background-color: red;
-    border: none;
-    padding: 7px;
-    border-radius: 1em;
-    color: white;
-    cursor: pointer;
-    margin-right: 1em;
-}
-
-.btn-volver:hover{
-    background-color: var(--text-white);
-    color: var(--azul-oscuro);
-    transition: 0.5ms;
-}
-
-.actions{
-    display: flex;
-    flex-direction: row;
+  .buttons-container {
     justify-content: center;
-    align-items: center;
-    gap: 3em;
-    
-}
-
-.dashboard header{
-    position: fixed;
-    top: 0;
     width: 100%;
-    background-color: var(--azul-oscuro);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 1em;
-    
+  }
+
+  .btn-volver,
+  .button-logout {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+  }
 }
 
-.help{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 3em;
+@media (max-width: 480px) {
+  .dashboard header {
+    padding: 0.5em;
+  }
+
+  .dashboard-actions {
+    margin-top: 4em;
+  }
 }

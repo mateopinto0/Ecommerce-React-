@@ -1,21 +1,32 @@
 /* tabla.css */
 
+.table-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+  padding: 0 1rem;
+}
+
 .tabla-wrapper {
-  overflow-x: auto;
+  overflow-x: auto;   /* ← scroll solo acá */
+  overflow-y: visible;
+  width: 100%;
   border-radius: 8px;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
 }
 
 table {
-  width: 80%;
+  width: 100%; /* ← era 80%, esto lo rompe en mobile */
   border-collapse: collapse;
   font-size: 14px;
   background-color: white;
-    
+  min-width: 600px; /* ← evita que las columnas se aplasten, activa scroll horizontal */
 }
 
 thead tr {
   background-color: var(--azul-oscuro);
-  
 }
 
 th {
@@ -25,6 +36,7 @@ th {
   font-size: 13px;
   color: var(--text-white);
   border-bottom: 1px solid #e0e0e0;
+  white-space: nowrap; /* ← el header no rompe en varias líneas */
 }
 
 td {
@@ -48,23 +60,32 @@ tbody tr:hover {
   padding: 3px 10px;
   border-radius: 6px;
   font-weight: 500;
+  white-space: nowrap;
 }
 
-.table-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2em;
+.btn-eliminar {
+  background-color: red;
+  color: white;
+  padding: 7px;
+  border: none;
+  border-radius: 1em;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
+/* responsive: en pantallas chicas reducimos padding */
+@media (max-width: 768px) {
+  th, td {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+}
 
-.btn-eliminar{
-    background-color: red;
-    color: white;
-    padding: 7px;
-    border: none;
-    border-radius: 1em;
-    cursor: pointer;
+@media (max-width: 480px) {
+  th, td {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
 }
 
 .badge-success { background: #e6f4ea; color: #2d6a4f; }
