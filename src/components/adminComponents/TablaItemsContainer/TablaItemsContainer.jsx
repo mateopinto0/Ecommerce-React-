@@ -1,0 +1,33 @@
+import { useEffect, useState } from "react"
+import { obtenerProductos, removeProduct } from "../../../service/ProductoService";
+import { Spinner } from "../../Spinner/Spinner";
+import { TablaItems } from "../TablaItems/TablaItems";
+
+export const TablaItemsContainer = () => {
+    const[items,setItems] = useState([]);
+    const[loading,setLoading]=useState(true);
+    
+    
+    useEffect(()=>{
+            
+        obtenerProductos().then((lista) => {setItems(lista); setLoading(false)})
+                
+    },[])
+
+    const handleRemoveItem = async(id) => {
+        const confirmar=window.confirm("¿Estás seguro que quieres eliminar el producto?")
+        if(!confirmar) return;
+        await removeProduct(id);
+        setItems((prev)=>prev.filter((item)=>item.id != id))
+    }
+
+    if(loading){
+            return( 
+            <Spinner></Spinner>
+            )
+        }
+
+    return(
+        <TablaItems items={items} handleRemoveItem={handleRemoveItem}></TablaItems>
+    )    
+}

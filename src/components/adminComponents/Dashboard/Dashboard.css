@@ -9,21 +9,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 3em;
+    margin-top: 1em;
 }
 .buttons-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 1em;
+    gap: 2em;
 }
 
-.button-volver{
-    background-color: var(--azul-oscuro);
+.btn-volver{
+    background-color: var(--color-celeste);
     border: none;
     padding: 7px;
     border-radius: 1em;
-  
+    font-size: small;
 }
 
 .button-logout{
@@ -33,11 +34,12 @@
     border-radius: 1em;
     color: white;
     cursor: pointer;
+    margin-right: 1em;
 }
 
-.button-volver:hover{
-    background-color: var(--color-celeste);
-    color: var(--text-white);
+.btn-volver:hover{
+    background-color: var(--text-white);
+    color: var(--azul-oscuro);
     transition: 0.5ms;
 }
 
@@ -54,6 +56,12 @@
     position: fixed;
     top: 0;
     width: 100%;
+    background-color: var(--azul-oscuro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1em;
+    
 }
 
 .help{

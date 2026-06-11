@@ -1,0 +1,72 @@
+/* tabla.css */
+
+.tabla-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background-color: white;
+    
+}
+
+thead tr {
+  background-color: var(--azul-oscuro);
+  
+}
+
+th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--text-white);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+td {
+  padding: 12px 16px;
+  color: var(--azul-oscuro);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background-color: var(--color-celeste);
+}
+
+/* badges de estado */
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.table-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+
+.btn-eliminar{
+    background-color: red;
+    color: white;
+    padding: 7px;
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+.badge-success { background: #e6f4ea; color: #2d6a4f; }
+.badge-warning { background: #fff8e1; color: #b45309; }
+.badge-danger  { background: #fdecea; color: #b91c1c; }

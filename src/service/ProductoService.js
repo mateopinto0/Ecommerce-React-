@@ -1,4 +1,4 @@
-import { addDoc, collection, doc, getDoc, getDocs } from "firebase/firestore"
+import { addDoc, collection, deleteDoc, doc, getDoc, getDocs } from "firebase/firestore"
 import { db } from "../firebase/config"
 
 
@@ -51,5 +51,15 @@ export const addProduct = async(productData) => {
         console.error("Error completo:", error);
         console.error("Stack:", error.stack);
         throw err;
+    }
+}
+
+export const removeProduct = async(id) => {
+    try{
+        const ref= doc(db,"products",id);
+        await deleteDoc(ref);
+        console.log("Producto eliminado");
+    }catch(err){
+        console.log(err)
     }
 }
