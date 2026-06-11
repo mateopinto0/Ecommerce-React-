@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import { Spinner } from "../Spinner/Spinner"
 import { collection, getDocs } from "firebase/firestore"
 import { db } from "../../firebase/config"
-import { obtenerProductos } from "../../service/productoService"
+import { obtenerProductos } from "../../service/ProductoService"
 
 export const ItemListContainer = () => {
 
