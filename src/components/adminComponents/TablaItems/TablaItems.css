@@ -1,28 +1,30 @@
 /* tabla.css */
 
 .table-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
   margin-top: 2em;
   padding: 0 1rem;
+  /* sacá el display:flex, align-items y justify-content */
 }
 
 .tabla-wrapper {
-  overflow-x: auto;   /* ← scroll solo acá */
-  overflow-y: visible;
+  overflow-x: auto;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* ← esto la centra sin romper el ancho */
   border-radius: 8px;
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
 }
 
 table {
-  width: 100%; /* ← era 80%, esto lo rompe en mobile */
+  width: 100%;
   border-collapse: collapse;
   font-size: 14px;
   background-color: white;
-  min-width: 600px; /* ← evita que las columnas se aplasten, activa scroll horizontal */
+  min-width: 600px;
+  table-layout: fixed; /* ← columnas con ancho fijo, no se expanden solas */
 }
 
 thead tr {

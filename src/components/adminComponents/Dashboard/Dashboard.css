@@ -1,8 +1,9 @@
 .dashboard {
   width: 100%;
-  min-height: 100vh; /* ← era height, con min-height el contenido puede crecer */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  
 }
 
 .dashboard header {
@@ -21,9 +22,12 @@
 .dashboard-actions {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 5em; /* ← espacio para el header fijo */
+  align-items: stretch; /* ← los hijos ocupan todo el ancho */
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5em;
   padding: 0 1rem;
+ 
 }
 
 .buttons-container {
