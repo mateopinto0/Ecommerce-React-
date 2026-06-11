@@ -57,7 +57,7 @@ export const ProductFormContainer = () =>{
 
             setProduct({nombre:"",precio:"",cantidad:"",descripcion:""})
             setFile(null)
-            navigate(`/success/${id}`, {replace: true})
+            navigate(`/admin/success/${id}`, {replace: true})
         } catch(error){
             console.log("Error: " + error);
             setErrores({general: error.message})

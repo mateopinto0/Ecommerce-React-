@@ -1,0 +1,65 @@
+.dashboard{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-actions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3em;
+}
+.buttons-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em;
+}
+
+.button-volver{
+    background-color: var(--azul-oscuro);
+    border: none;
+    padding: 7px;
+    border-radius: 1em;
+  
+}
+
+.button-logout{
+    background-color: red;
+    border: none;
+    padding: 7px;
+    border-radius: 1em;
+    color: white;
+    cursor: pointer;
+}
+
+.button-volver:hover{
+    background-color: var(--color-celeste);
+    color: var(--text-white);
+    transition: 0.5ms;
+}
+
+.actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    
+}
+
+.dashboard header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.help{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3em;
+}
