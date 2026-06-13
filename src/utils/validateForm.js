@@ -1,4 +1,4 @@
-export const validateForm = (product) =>{
+export const validateForm = (product,esEditar = false) =>{
 
     const errors = {};
 
@@ -14,8 +14,9 @@ export const validateForm = (product) =>{
     if(!product.descripcion.trim()){
         errors.descripcion="La descripcion es obligatoria";
     }
-    if(product.imagenUrl){
+    /*if(product.imagenUrl){
         errors.imagenUrl = "Debe seleccionar una imagen";
-    }
+    }*/
+     if (!esEditar && !data.file) errores.file = "La imagen es requerida";
     return errors;
 }

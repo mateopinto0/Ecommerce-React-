@@ -74,7 +74,23 @@ tbody tr:hover {
   cursor: pointer;
   white-space: nowrap;
 }
+.btn-detalle{
+  background-color: var(--azul-oscuro);
+  color: white;
+  padding: 7px;
+  border: none;
+  border-radius: 1em;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: small;
+}
 
+.fila-botones{
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
 /* responsive: en pantallas chicas reducimos padding */
 @media (max-width: 768px) {
   th, td {

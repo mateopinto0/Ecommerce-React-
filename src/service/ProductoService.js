@@ -1,4 +1,4 @@
-import { addDoc, collection, deleteDoc, doc, getDoc, getDocs } from "firebase/firestore"
+import { addDoc, collection, deleteDoc, doc, getDoc, getDocs, updateDoc } from "firebase/firestore"
 import { db } from "../firebase/config"
 
 
@@ -61,5 +61,18 @@ export const removeProduct = async(id) => {
         console.log("Producto eliminado");
     }catch(err){
         console.log(err)
+    }
+}
+
+export const editarProducto = async(id,nuevosDatos)=>{
+    try{
+         const datosFiltrados = Object.fromEntries(
+            Object.entries(nuevosDatos).filter(([_, v]) => v !== undefined)
+        );
+        const ref= doc(db,"products",id);
+        await updateDoc(ref,nuevosDatos);
+        console.log("Producto editado correctamente")
+    }catch(err){
+        throw err;
     }
 }

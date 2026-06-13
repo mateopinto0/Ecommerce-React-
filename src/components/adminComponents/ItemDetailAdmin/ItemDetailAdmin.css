@@ -1,0 +1,47 @@
+.card-detail-admin {
+  background: var(--color-bg, #fff);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: sans-serif;
+}
+
+.card-detail-admin img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-detail-admin-info {
+  padding: 1.5rem;
+}
+
+.card-detail-admin-info h2 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+  color: #111;
+}
+
+.card-detail-admin-descripcion {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.7;
+  margin: 0 0 1rem;
+}
+
+.card-detail-admin-info h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #0f6e56;
+  margin: 0 0 1.25rem;
+}
+
+.container-button {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}

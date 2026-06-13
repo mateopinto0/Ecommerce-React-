@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./TablaItems.css"
 
 export const TablaItems = ({items, handleRemoveItem}) => {
@@ -19,7 +20,10 @@ export const TablaItems = ({items, handleRemoveItem}) => {
                     <td>{item.id}</td>
                     <td>{item.nombre}</td>
                     <td>{item.precio}</td>
-                    <td><button className="btn-eliminar" onClick={()=>handleRemoveItem(item.id)}>Eliminar</button></td>
+                    <td className="fila-botones">
+                        
+                        <Link to={"/admin/detalle-item/"+item.id} className="btn-detalle">Ver detalle</Link>
+                        <button className="btn-eliminar" onClick={()=>handleRemoveItem(item.id)}>Eliminar</button></td>
                 </tr>
             ))}
          </tbody>   

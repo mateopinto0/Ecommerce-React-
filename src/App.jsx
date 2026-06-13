@@ -17,6 +17,8 @@ import { AdminLayout } from './layouts/AdminLayout'
 import { Dashboard } from './components/adminComponents/Dashboard/Dashboard'
 import { ProtectedRoute } from './components/ProtectedRoute/ProtectedRoute'
 import { Login } from './components/Login/Login'
+import { ItemDetailAdminContainer } from './components/adminComponents/ItemDetailAdminContainer/ItemDetailAdminContainer'
+import { FormEditarItemContainer } from './components/adminComponents/FormEditarItemContainer/FormEditarItemContainer'
 
 
 
@@ -42,8 +44,10 @@ function App() {
 
         <Route index element={<Navigate to={"dashboard"} />}></Route>
           <Route path='dashboard' element={<Dashboard></Dashboard>}></Route>
+          <Route path='detalle-item/:id' element={<ItemDetailAdminContainer></ItemDetailAdminContainer>}></Route>
           <Route path='new/product' element={<ProductFormContainer></ProductFormContainer>}></Route>
           <Route path='success/:id' element={<ProductSuccess></ProductSuccess>}></Route>
+          <Route path='editar-item/:id' element={<FormEditarItemContainer></FormEditarItemContainer>}></Route>
       </Route>    
         </Routes>
        
