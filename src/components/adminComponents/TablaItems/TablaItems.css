@@ -24,11 +24,12 @@ table {
   font-size: 14px;
   background-color: white;
   min-width: 600px;
-  table-layout: fixed; /* ← columnas con ancho fijo, no se expanden solas */
+  table-layout: fixed;
 }
 
 thead tr {
-  background-color: var(--azul-oscuro);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-violet);
 }
 
 th {
@@ -52,7 +53,7 @@ tbody tr:last-child td {
 }
 
 tbody tr:hover {
-  background-color: var(--color-celeste);
+  background-color: var(--color-border);
 }
 
 /* badges de estado */
@@ -66,7 +67,7 @@ tbody tr:hover {
 }
 
 .btn-eliminar {
-  background-color: red;
+  background-color: var(--color-danger);
   color: white;
   padding: 7px;
   border: none;

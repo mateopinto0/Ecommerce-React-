@@ -10,6 +10,9 @@
     width: 40%;
     padding: 2em;
     border-radius: 1em;
+      box-shadow: 0 0 10px var(--background),
+                0 0 20px var(--azul-oscuro),
+                0 0 40px var(--color-violet);
 }
 
 .login-container{
@@ -40,7 +43,7 @@
 }
 
 .errorMessage{
-    color: red;
+    color: var(--color-danger);
 }
 
 .button-login{

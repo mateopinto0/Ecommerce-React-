@@ -18,7 +18,7 @@
 
 .button-cart-red{
     display: flex;
-    background-color: red;
+    background-color: var(--color-danger);
     color: white;
     border: none;
     border-radius: 5px;

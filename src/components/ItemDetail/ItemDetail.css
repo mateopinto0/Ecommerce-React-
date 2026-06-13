@@ -4,10 +4,14 @@
     gap: 32px;
     padding: 16px;
     align-items: flex-start;
-    background-color: white;
-    color: var(--color-celeste);
+    background-color: var(--azul-oscuro);
+    color: var(--text-white);
     width: 70%;
     border-radius: 1em;
+    box-shadow: 0 0 10px var(--background),
+                0 0 20px var(--azul-oscuro),
+                0 0 40px var(--color-violet);
+    margin-bottom: 2rem;            
 }
 
 .card-detail img {
@@ -26,7 +30,7 @@
 }
 
 .card-detail-descripcion {
-    color: #666;
+    color: var(--text-muted);
     line-height: 1.6;
 }
 .container-button{

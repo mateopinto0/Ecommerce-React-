@@ -42,7 +42,7 @@ export const Login = () => {
                 <input type="password" name="password" placeholder="Ingrese su contraseña" id="password" onChange={(e) => setPassword(e.target.value)} required></input>
                 </div>
                 {error && <p className="errorMessage">Correo y/o contraseña incorrecto</p>}
-                <button type="submit" className="button-login">Iniciar sesion</button>
+                <button type="submit" className="button">Iniciar sesion</button>
             </form>
             </div>
         </div>

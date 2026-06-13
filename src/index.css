@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=DM+Serif+Text:ital@0;1&family=Electrolize&family=Fredoka:wght@300..700&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Share+Tech&family=VT323&display=swap');
 #root{
   display: flex;
   flex-direction: column;
@@ -7,19 +6,44 @@
 }
 
 body{
-   background: linear-gradient(135deg, var(--azul-oscuro), var(--color-violet), var(--color-celeste));
-    background-size: 400% 400%;
-    animation: gradientMove 10s ease infinite;
-    background-repeat: no-repeat;
-    color: var(--text-white);
     margin: 0;
-    font-family: 'Noto Sans Display',sans-serif;
+  min-height: 100vh;
+  background-color: var(--background);
+  background-image: 
+    radial-gradient(ellipse at 30% 50%, rgba(139, 0, 255, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(255, 0, 128, 0.10) 0%, transparent 50%),
+    linear-gradient(rgba(139, 0, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 0, 255, 0.05) 1px, transparent 1px);
+  background-size: auto, auto, 32px 32px, 32px 32px;
+  color: var(--text-white);
+    font-family: 'Share Tech',sans-serif;
     min-height: 100vh;
+  background-repeat: no-repeat;  
+    
 }
 
 main{
   flex: 1;
   
+}
+.button{
+    background-color: var(--color-violet);
+    color: var(--text-white);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-family: 'Share Tech', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s, transform 0.1s;
+}
+.button:hover {
+    background-color: #7c22d4;
+    transform: scale(1.02);
+}
+.button:active {
+    transform: scale(0.98);   /* ✅ feedback al hacer clic */
 }
 
 .carrito{
@@ -29,20 +53,18 @@ main{
     flex-direction: column;
 }
 .button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--azul-oscuro);
-    color: white;
-    padding: 10px;
+     background-color: var(--color-violet);   /* #9333ea */
+    color: var(--text-white);
     border: none;
-    border-radius: 1em;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: 500;
     cursor: pointer;
-    font-size: medium;
+    transition: 0.2s, transform 0.1s;
 }
 .button:hover{
-    background-color: var(--background);
-    color: white;
+        background-color: #7c22d4;              /* violet más oscuro */
+    transform: scale(1.02);
 }
 
 @keyframes gradientMove {

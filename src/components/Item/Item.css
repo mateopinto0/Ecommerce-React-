@@ -3,26 +3,47 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 12px;                          /* ✅ espaciado entre elementos internos */
     padding: 1em;
     border-radius: 1em;
-    background-color: var(--text-white);
+    background-color: var(--azul-oscuro);
     width: 300px;
-    max-width: 320px; 
+    max-width: 320px;
     color: var(--color-celeste);
-    box-shadow: 0 0 10px #0084ff,
-                0 0 20px #016DFE,
-                0 0 40px #3400FF;
+    /* ✅ estaba fuera del box-shadow, no aplicaba */
+    box-shadow: 0 0 10px var(--background),
+                0 0 20px var(--azul-oscuro),
+                0 0 40px var(--color-violet);
+    transition: border-color 0.2s, box-shadow 0.2s;  /* ✅ transición suave en hover */
 }
 
+.card:hover {
+    
+    box-shadow: 0 0 10px var(--background),
+                0 0 20px var(--azul-oscuro),
+                0 0 60px var(--color-celeste);  /* ✅ el glow cambia a rosa en hover */
+}
 
 .card img {
     width: 100%;
-    height: auto; 
-    max-height: 300px;
+    height: 200px;                      /* ✅ altura fija para que todas las cards sean iguales */
     object-fit: cover;
     border-radius: 0.5em;
 }
 
+.card h3 {
+    font-family: 'Audiowide', sans-serif;
+    color: var(--text-white);
+    font-size: 1em;
+    text-align: center;
+    margin: 0;
+}
+
+.card .precio {
+    color: var(--color-gold);           /* ✅ precio destacado en dorado */
+    font-size: 1.1em;
+    font-weight: 500;
+}
 
 .botonesContainer {
     display: flex;
@@ -30,33 +51,41 @@
     justify-content: center;
     gap: 0.5em;
     flex-wrap: wrap;
-    
+    width: 100%;                        /* ✅ ocupa todo el ancho de la card */
 }
 
+.botonesContainer .button,
+.botonesContainer .button-secundario {
+    flex: 1;                            /* ✅ los botones se reparten el espacio */
+    min-width: 100px;
+    text-align: center;
+}
 
+/* ── Responsive ── */
 @media (max-width: 480px) {
-    body {
-        font-size: 80%;
-    }
+    body { font-size: 80%; }
 
     .card {
+        width: 100%;
         max-width: 90%;
+    }
+
+    .botonesContainer {
+        flex-direction: column;         /* ✅ botones apilados en móvil */
+    }
+
+    .botonesContainer .button,
+    .botonesContainer .button-secundario {
+        width: 100%;
     }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-    body {
-        font-size: 90%;
-    }
+    body { font-size: 90%; }
 
-    .card {
-        max-width: 400px;
-    }
+    .card { max-width: 400px; }
 }
 
-
 @media (min-width: 769px) {
-    .card {
-        max-width: 320px;
-    }
+    .card { max-width: 320px; }
 }

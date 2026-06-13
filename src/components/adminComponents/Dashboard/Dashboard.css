@@ -3,7 +3,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--color-celeste);
+  background-color: var(--background);
 }
 
 .dashboard header {
@@ -16,13 +16,14 @@
   align-items: center;
   padding: 0.5em 1em;
   z-index: 100;
-  box-sizing: border-box; /* ← evita que el padding desborde el 100% */
+  box-sizing: border-box; 
+  border-bottom: 1px solid var(--color-border);
 }
 
 .dashboard-actions {
   display: flex;
   flex-direction: column;
-  align-items: stretch; /* ← los hijos ocupan todo el ancho */
+  align-items: stretch; 
   width: 100%;
   box-sizing: border-box;
   margin-top: 7em;
@@ -36,7 +37,7 @@
   justify-content: space-between;
   margin: 1em;
   gap: 1em;
-  flex-wrap: wrap; /* ← en mobile los botones bajan a la siguiente línea */
+  flex-wrap: wrap; 
 }
 
 .actions {
@@ -45,11 +46,11 @@
   justify-content: center;
   align-items: center;
   gap: 1em;
-  flex-wrap: wrap; /* ← idem */
+  flex-wrap: wrap; 
 }
 
 .btn-volver {
-  background-color: var(--color-celeste);
+  background-color: var(--color-violet);
   border: none;
   padding: 7px 14px;
   border-radius: 1em;
@@ -59,13 +60,13 @@
 }
 
 .btn-volver:hover {
-  background-color: var(--text-white);
-  color: var(--azul-oscuro);
+  background-color: var(--color-celeste);
+  color:var(--text-white);
   transition: background-color 0.3s; /* ← era 0.5ms, no se notaba */
 }
 
 .button-logout {
-  background-color: red;
+  background-color: var(--color-danger);
   border: none;
   padding: 7px 14px;
   border-radius: 1em;

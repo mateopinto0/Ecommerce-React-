@@ -3,10 +3,11 @@
     align-items: center;
     justify-content: center;
     gap: 1em;
+    color: var(--text-muted);
 }
 
 .botonesCarrito{
-    background-color: var(--color-celeste);
+    background-color: var(--color-violet);
     color: white;
     border: none;
     border-radius: 5px;

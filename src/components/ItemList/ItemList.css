@@ -1,16 +1,21 @@
 .link{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--azul-oscuro);
-    color: white;
-    padding: 10px;
+    background-color: var(--color-violet);
+    color: var(--text-white);
     border: none;
-    border-radius: 1em;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-family: 'Share Tech', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s, transform 0.1s;
 }
-.link:hover{
-    background-color: var(--background);
-    color: white;
+.button:hover {
+    background-color: #7c22d4;
+    transform: scale(1.02);
+}
+.button:active {
+    transform: scale(0.98);   /* ✅ feedback al hacer clic */
 }
 
 .container-itemlist{
