@@ -85,11 +85,42 @@ tbody tr:hover {
   font-size: small;
 }
 
+.buscador {
+  width: 80%;
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.container-buscador{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .fila-botones{
   display: flex;
   gap: 1em;
   justify-content: center;
   align-items: center;
+}
+/* TablaItems.css */
+
+#tabla{
+    overflow-y: auto;
+    max-height: 500px; 
+    border-radius: 6px;
+}
+
+
+#tabla thead th {
+    position: sticky;
+    top: 0;
+    background-color: var(--azul-oscuro);
+    z-index: 1;
 }
 /* responsive: en pantallas chicas reducimos padding */
 @media (max-width: 768px) {
@@ -99,7 +130,9 @@ tbody tr:hover {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 680px) {
+
+  
   th, td {
     padding: 6px 8px;
     font-size: 12px;

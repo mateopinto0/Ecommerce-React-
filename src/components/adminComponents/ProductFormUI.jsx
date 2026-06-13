@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./ProductForm.css"
 export const ProductFormUI = ({product,errores,loading,onChange,onFileChange,onSubmit}) =>{
 
@@ -32,8 +33,11 @@ export const ProductFormUI = ({product,errores,loading,onChange,onFileChange,onS
                     <input type="file" accept="image/*" onChange={onFileChange} required></input>
                     {errores.imagenUrl && <p>{errores.imagenUrl}</p>}
                 </div>
-                <button type="submit" className="button btn-agregar">Añadir Juego</button>
 
+                <div className="container-buttons">
+                <Link to={"/admin/dashboard"} className="button btn-agregar">Cancelar</Link>
+                <button type="submit" className="button btn-agregar">Añadir Juego</button>
+                </div>
                 {errores.general && <p>{errores.general}</p>}
             </form>
         </div>

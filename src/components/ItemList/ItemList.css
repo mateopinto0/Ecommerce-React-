@@ -12,3 +12,7 @@
     background-color: var(--background);
     color: white;
 }
+
+.container-itemlist{
+    margin-top: 6rem;
+}

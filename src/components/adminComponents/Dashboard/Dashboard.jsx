@@ -39,11 +39,8 @@ export const Dashboard = () => {
 
 
     <section className="dashboard-actions">
-        <h3>Acciones rapidas</h3>
         <div className="actions">
-            <Link className="button" to="/admin/new/product">Cargar nuevo producto</Link>
-            <Link className="button" to="#">Modificar</Link>
-            
+            <Link className="button" to="/admin/new/product">+ Cargar nuevo producto</Link>          
         </div>
         </section> 
 

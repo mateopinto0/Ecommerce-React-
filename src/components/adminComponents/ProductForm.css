@@ -25,6 +25,12 @@
     margin: 1em;
 }
 
+.container-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @media screen and (max-width:580px) {
     .input input{
         width: 20em;

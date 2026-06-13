@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom"
 import "./TablaItems.css"
 
-export const TablaItems = ({items, handleRemoveItem}) => {
+export const TablaItems = ({items, handleRemoveItem,setBusqueda,busqueda}) => {
+
+    
 
     return(
         <div className="table-container">
+             <div className="container-buscador">
+             <input className="buscador" type="text" placeholder="Buscar por nombre..." value={busqueda} onChange={(e) => setBusqueda(e.target.value)}/>
+            </div>
+        <div id="tabla">    
        <table className="tabla-wrapper">
         <thead>
             <tr>
@@ -28,6 +34,7 @@ export const TablaItems = ({items, handleRemoveItem}) => {
             ))}
          </tbody>   
         </table>
+        </div>
         </div> 
     )
 }

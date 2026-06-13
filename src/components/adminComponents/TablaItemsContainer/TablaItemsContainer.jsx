@@ -6,6 +6,7 @@ import { TablaItems } from "../TablaItems/TablaItems";
 export const TablaItemsContainer = () => {
     const[items,setItems] = useState([]);
     const[loading,setLoading]=useState(true);
+    const [busqueda,setBusqueda] = useState("");
     
     
     useEffect(()=>{
@@ -13,6 +14,8 @@ export const TablaItemsContainer = () => {
         obtenerProductos().then((lista) => {setItems(lista); setLoading(false)})
                 
     },[])
+
+    const itemsFiltrados = items.filter(item => item.nombre.toLowerCase().includes(busqueda.toLowerCase()))
 
     const handleRemoveItem = async(id) => {
         const confirmar=window.confirm("¿Estás seguro que quieres eliminar el producto?")
@@ -28,6 +31,7 @@ export const TablaItemsContainer = () => {
         }
 
     return(
-        <TablaItems items={items} handleRemoveItem={handleRemoveItem}></TablaItems>
+        <TablaItems items={itemsFiltrados} handleRemoveItem={handleRemoveItem}
+        busqueda={busqueda} setBusqueda={setBusqueda}></TablaItems>
     )    
 }

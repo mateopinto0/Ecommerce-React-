@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;      /* desktop: imagen | info */
     gap: 32px;
-    padding: 24px;
+    padding: 16px;
     align-items: flex-start;
     background-color: white;
     color: var(--color-celeste);

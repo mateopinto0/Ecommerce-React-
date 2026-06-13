@@ -4,6 +4,7 @@ import "./ItemDetailAdmin.css"
 export const ItemDetailAdmin = ({id,imagenUrl,nombre,descripcion,precio}) => {
 
     return(
+        <div className="container-detail-admin">
         <div className="card-detail-admin">
             <img src={imagenUrl} alt={nombre} />
             
@@ -16,6 +17,7 @@ export const ItemDetailAdmin = ({id,imagenUrl,nombre,descripcion,precio}) => {
                     <Link to={"/admin/editar-item/" + id} className="button" >Editar</Link>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

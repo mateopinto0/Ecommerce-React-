@@ -6,6 +6,7 @@
   max-width: 600px;
   margin: 2rem auto;
   font-family: sans-serif;
+  padding: 1em;
 }
 
 .card-detail-admin img {
@@ -44,4 +45,14 @@
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+.container-detail-admin{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
 }

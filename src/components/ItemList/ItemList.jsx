@@ -5,7 +5,7 @@ import "./ItemList.css"
 export const ItemList = ({items}) => {
 
     return(
-        <>
+        <div className="container-itemlist">
         <h2>Lista de Juegos</h2>
         <div className="cards-container">
         {items.map((item)=>(
@@ -14,7 +14,7 @@ export const ItemList = ({items}) => {
             </Item>
         ))}
         </div>
-        </>
+        </div>
     )
 
 
