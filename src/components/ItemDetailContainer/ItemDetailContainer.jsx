@@ -37,7 +37,7 @@ export const ItemDetailContainer = () => {
     return(
         
         <div className="item-container">
-            <h2>Detalles del producto</h2>
+            <h1>Detalles del producto</h1>
             <ItemDetail 
             id={itemDetail.id}
                 imagenUrl={itemDetail.imagenUrl}
