@@ -27,3 +27,9 @@
     padding: 10px;
     border-radius: 10px;
 }
+
+.carrito-summary{
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}

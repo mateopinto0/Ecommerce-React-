@@ -3,6 +3,8 @@ import { BotonCarrito } from "../BotonCarrito/BotonCarrito";
 import { Item } from "../Item/Item";
 import "./Cart.css"
 import { useState } from "react";
+import { CartList } from "./CartList";
+import { CartSummary } from "./CartSummary";
 
 export const Cart = () => {
 
@@ -37,25 +39,8 @@ const checkoutHandler = () => {
 return(
     <div className="carrito">
         <h1>Carrito de Compras</h1>
-        <div className="carrito-items">
-        { cart.length === 0 ? <p>El carrito está vacío.</p> :  cart.map((item) => (
-            
-            <Item key={item.id} {...item}>
-                <BotonCarrito precio={item.precio} cantidad={item.cantidad} onQuantityChange={(qty) => updateQuantity(item.id, qty)}></BotonCarrito>
-                <button className="button-cart-red" onClick={() => removeItemHandler(item.id)}>
-                    Eliminar del carrito
-                </button>
-            </Item>
-            
-        )) }</div>
-
-        <h3>Precio total : {totalPrice} ARS</h3>
-        <button className="button" onClick={() => clearCartHandler()}>
-            Vaciar Carrito
-        </button>
-        <button className="button" onClick={() => checkoutHandler()}>
-            Finalizar Compra
-        </button>
+        <CartList cart={cart} onRemoveItem={removeItemHandler} onQuantityChange={updateQuantity}></CartList>
+        <CartSummary totalPrice={totalPrice} onClearCart={clearCart} onCheckout={checkoutHandler}></CartSummary>
     </div>
 )
 }
