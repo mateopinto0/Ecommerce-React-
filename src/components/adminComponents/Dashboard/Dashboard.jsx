@@ -1,7 +1,8 @@
-import { Link, useNavigate } from "react-router-dom"
+import { Link, replace, useNavigate } from "react-router-dom"
 import "./Dashboard.css"
 import { useAuth } from "../../../context/AuthContext"
 import { TablaItemsContainer } from "../TablaItemsContainer/TablaItemsContainer";
+import { useEffect } from "react";
 
 export const Dashboard = () => {
     const {logout} = useAuth();
@@ -18,12 +19,37 @@ export const Dashboard = () => {
 
     const handleLogoutTienda = async () => {
         try{
+            const confirmar = window.confirm("Al volver a la tienda se cerrara la sesión y debera iniciar sesión de nuevo ¿Desea volver a la tienda?");
+            if(!confirmar) return;
+            navigate("/",{replace:true})
             await logout()
+            
             
         }catch(error){
             console.log(error)
         }
     }
+
+    useEffect(() => {
+        
+        window.history.pushState(null, "", window.location.href);
+
+        const handlePopState = async () => {
+            try {
+                 navigate("/", { replace: true });
+                await logout();
+               
+            } catch (error) {
+                console.log(error);
+            }
+        };
+
+        window.addEventListener("popstate", handlePopState);
+
+        return () => {
+            window.removeEventListener("popstate", handlePopState);
+        };
+    }, [logout, navigate]);
 
 
     return(
@@ -31,7 +57,7 @@ export const Dashboard = () => {
         <header>
                 <h2>Panel de administracion</h2>
             <div className="buttons-container">
-                <Link  to="/" className="btn-volver" onClick={handleLogoutTienda}>Volver a la tienda</Link>
+                <button className="btn-volver" onClick={handleLogoutTienda}>Volver a la tienda</button>
                 <button className="button-logout" onClick={handleLogout}>Cerrar sesion</button>
             </div>
            
