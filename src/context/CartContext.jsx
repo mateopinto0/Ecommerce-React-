@@ -40,7 +40,6 @@ export const CartProvider = ({children}) => {
         
 
         setCart([...cart, {...item, cantidad: 1}]);
-        console.log("Producto agregado al carrito:");
 
     }
     const updateQuantity = (id, cantidad) => {
@@ -71,7 +70,7 @@ export const CartProvider = ({children}) => {
     const checkout = () => {
         alert("Gracias por tu compra");
         clearCart();
-        Navigate("/");
+        navigate("/");
     }
 
     const getCart = () => {

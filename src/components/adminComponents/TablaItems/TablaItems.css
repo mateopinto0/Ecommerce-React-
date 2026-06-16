@@ -123,6 +123,36 @@ tbody tr:hover {
     background-color: var(--azul-oscuro);
     z-index: 1;
 }
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    padding: 16px 0;
+}
+
+.page-link {
+    padding: 6px 12px;
+    border: 1px solid var(--color-surface);
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--color-violet);
+    color: var(--text-white);
+}
+
+.page-link:hover:not(:disabled) {
+    background-color: #e9ecef;
+}
+
+.page-link.active {
+    background-color: var(--text-muted);
+    color: white;
+    border-color: var(--color-border);
+}
+
+.page-link:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
 /* responsive: en pantallas chicas reducimos padding */
 @media (max-width: 768px) {
   th, td {

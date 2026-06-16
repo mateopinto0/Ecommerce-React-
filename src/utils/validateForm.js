@@ -17,6 +17,6 @@ export const validateForm = (product,esEditar = false) =>{
     /*if(product.imagenUrl){
         errors.imagenUrl = "Debe seleccionar una imagen";
     }*/
-     if (!esEditar && !data.file) errores.file = "La imagen es requerida";
+     if (!esEditar && !product.file) errors.file = "La imagen es requerida";
     return errors;
 }
